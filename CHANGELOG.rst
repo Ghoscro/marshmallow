@@ -10,6 +10,8 @@ Features:
 
 Bug fixes:
 
+- Accept case variants of the localhost domain in `marshmallow.validate.Email`.
+
 - Raise `ValidationError <marshmallow.exceptions.ValidationError>`
   (not `ValueError`) for NaN in `TimeDelta <marshmallow.fields.TimeDelta>`
   (:pr:`3004`).

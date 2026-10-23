@@ -293,7 +293,7 @@ class Email(Validator):
         if not self.USER_REGEX.match(user_part):
             raise ValidationError(message)
 
-        if domain_part not in self.DOMAIN_WHITELIST:
+        if domain_part.lower() not in self.DOMAIN_WHITELIST:
             if not self.DOMAIN_REGEX.match(domain_part):
                 raise ValidationError(message)
 
